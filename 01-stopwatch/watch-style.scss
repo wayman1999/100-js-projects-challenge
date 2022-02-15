@@ -1,0 +1,51 @@
+/* Variabes */  
+$orange: #ffa600;
+$grey:#f3f3f3;
+$white: #fff;
+$base-color:$orange ;
+
+@mixin transition {
+    transition: all 0.5s ease-in-out;
+}
+@mixin corcers($radius) {
+    border-radius: $radius;
+}
+body{
+    background-color: $base-color;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    height:100%;
+}
+.wrapper{
+    width: 800px;
+    margin: 30px auto;
+    color: $white;
+    text-align: center;
+}
+h1, h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2.6em;
+    text-transform: uppercase;
+}
+#seconds, #tens{
+    font-size:2em;
+  }
+button{
+    @include corcers(5px);
+    width:180px;
+    color: $white;
+    background-color: $base-color;
+    padding: 18px 10px;
+    border: 1px solid $white;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 10px;
+    outline: none;
+    text-decoration:none;
+}
+button:hover{
+    @include transition;
+    background:$white;
+    border: solid 1px $white;
+    color:$base-color;
+}
